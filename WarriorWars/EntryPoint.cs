@@ -1,0 +1,29 @@
+using WarriorWars.Enum;
+using System.Threading;
+
+namespace WarriorWars
+{
+    public class EntryPoint
+    {
+        static Random rng = new Random();
+        public static void Main(String[] args)
+        {
+            Warrior goodGuy = new Warrior("Rudraksh", Faction.GoodGuy);
+            Warrior badGuy = new Warrior("John", Faction.BadGuy);
+
+            while (goodGuy.IsAlive && badGuy.IsAlive)
+            {
+                if (rng.Next(0, 10) < 5)
+                {
+                    goodGuy.Attack(badGuy);
+                }
+                else
+                {
+                    badGuy.Attack(goodGuy);
+                }
+                Thread.Sleep(500);
+            }
+        }
+    }
+}
+
