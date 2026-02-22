@@ -6,7 +6,7 @@ namespace WarriorWars
     public class EntryPoint
     {
         static Random rng = new Random();
-        public static void Main(String[] args)
+        public static void Main()
         {
             Warrior goodGuy = new Warrior("Rudraksh", Faction.GoodGuy);
             Warrior badGuy = new Warrior("John", Faction.BadGuy);
@@ -21,7 +21,7 @@ namespace WarriorWars
                 {
                     badGuy.Attack(goodGuy);
                 }
-                Thread.Sleep(500);
+                Thread.Sleep(200);
             }
         }
     }

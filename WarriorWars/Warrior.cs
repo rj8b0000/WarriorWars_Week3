@@ -12,7 +12,7 @@ namespace WarriorWars
         private int health;
         private string name;
         private bool isAlive;
-        public bool IsAlive { get; }
+        public bool IsAlive => isAlive;
 
         private Weapon weapon;
         private Armor armor;
@@ -52,7 +52,7 @@ namespace WarriorWars
             }
             else
             {
-                System.Console.WriteLine($"{name} attacked {enemy.name}. {damage} was inflicted, remaining health is {enemy.health}!");
+                System.Console.WriteLine($"{name} attacked {enemy.name}. {damage} damage was inflicted to {enemy.name}, remaining health is {enemy.health}!");
             }
             
         }

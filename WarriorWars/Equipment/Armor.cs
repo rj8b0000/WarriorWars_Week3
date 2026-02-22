@@ -9,7 +9,7 @@ namespace WarriorWars.Equipment
         
         private int armorPoints;
         
-        public int ArmorPoints { get; }
+        public int ArmorPoints => armorPoints;
 
         public Armor(Faction faction)
         {

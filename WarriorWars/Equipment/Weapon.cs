@@ -7,7 +7,7 @@ namespace WarriorWars.Equipment
         private const int BAD_GUY_DAMAGE = 5;
         
         private int damage;
-        public int Damage { get; }
+        public int Damage => damage;
         
         public Weapon(Faction faction)
         {
@@ -25,4 +25,3 @@ namespace WarriorWars.Equipment
         }
     }
 }
-
